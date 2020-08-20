@@ -6,7 +6,7 @@ default: &default
 #Feel Free to change the username and password to match your local postgres env
 development:
   <<: *default
-  database: noteapp_development
+  database: record_development
   username: test2
   password: test2
   port: 5432
@@ -15,7 +15,7 @@ development:
 #Feel Free to change the username and password to match your local postgres env
 test:
   <<: *default
-  database: noteapp_test
+  database: record_test
   username: test2
   password: test2
   port: 5432
@@ -24,5 +24,5 @@ test:
 
 production:
   <<: *default
-  database: noteapp_production
+  database: record_production
   url: <%= ENV['DATABASE_URL'] %>
